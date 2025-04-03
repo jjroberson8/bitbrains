@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home'
 import Learnmore from './pages/Learnmore';
 import Footer from './components/Footer';
+import './styles/App.css'
 
 function App() {
 
