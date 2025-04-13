@@ -1,0 +1,31 @@
+.start {
+    padding: 1rem;
+    color: black;
+    text-align: center;
+    background-color: #D0E1ED;
+    border: 1px solid #d3d3d3;
+}
+
+.title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.startBox {
+    align-items: center;
+}
+
+
+button {
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}

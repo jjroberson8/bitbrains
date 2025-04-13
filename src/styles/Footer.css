@@ -1,25 +1,62 @@
 .footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #A3C6B6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #A3C6B6; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  padding: 20px 10px;
+  gap: 15px; /* Space between footer content and social media */
+  text-align: center; 
+}
+
+.footerContent p {
+  margin: 5px 0;
+  color: #000; 
+  font-size: 16px; 
+}
+
+.socialMedia {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px; 
+  font-size: 28px; /* Icon size */
+}
+
+.socialMedia a {
+  color: black; /* Default icon color */
+  transition: color 0.3s ease; 
+  text-decoration: none; /* Remove underline if using links */
+}
+
+.socialMedia a:hover {
+  color: rgb(204, 0, 255); /* Change color when hovered (optional) */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column; /* Stacks content vertically on smaller screens */
+      gap: 10px; /* Reduce spacing */
   }
-  
-  .socialMedia svg {
-    color: black;
-    margin: 20px;
-    font-size: 70px;
-    cursor: pointer;
+
+  .socialMedia {
+      font-size: 24px; /* Slightly reduce icon size */
+      gap: 15px; /* Reduce gap between icons */
   }
-  
-  .footer p {
-    color: black;
+}
+
+@media (max-width: 480px) {
+  .footerContent p {
+      font-size: 14px; /* Smaller font size for smaller devices */
   }
+
+  .socialMedia {
+      font-size: 20px; /* Make icons even smaller for tiny devices */
+      gap: 10px;
+  }
+}
