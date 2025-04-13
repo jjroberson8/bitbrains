@@ -26,10 +26,26 @@
 
 }
 
+.navbar .rightSide ul {
+  display:flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.navbar .rightSide ul li {
+  display:flex;
+  flex-direction: row;
+  list-style-type: none;
+  text-align: left;
+}
+
+
 .navbar a {
     color:black;
     margin: 20px;
     text-decoration: none;
+    text-align: center;
+    text-wrap: wrap;
 }
 
 .navbar a:hover {

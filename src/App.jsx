@@ -4,6 +4,9 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router';
 import Navbar from './components/Navbar';
 import Home from './pages/Home'
 import Learnmore from './pages/Learnmore';
+import Quiz from './pages/Quiz';
+import Showcase from './pages/Showcase';
+import Overview from './pages/Overview';
 import Footer from './components/Footer';
 import './styles/App.css'
 
@@ -14,10 +17,15 @@ function App() {
       <div className='App'>
         <Router>
           <Navbar/>
-          <Routes>
-            <Route path='/' exact element={<Home/>}/>
-            <Route path='/learnmore' exact element={<Learnmore/>}/>
-          </Routes>
+          <div className='content-wrap'>
+            <Routes>
+              <Route path='/' exact element={<Home/>}/>
+              <Route path='/overview' exact element={<Overview/>}/>
+              <Route path='/showcase' exact element={<Showcase/>}/>
+              <Route path='/quiz' exact element={<Quiz/>}/>
+              <Route path='/learnmore' exact element={<Learnmore/>}/>
+            </Routes>
+          </div>
           <Footer/>
         </Router>
       </div>

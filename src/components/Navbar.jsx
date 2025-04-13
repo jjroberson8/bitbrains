@@ -7,16 +7,17 @@ function Navbar() {
   return (
     <div className='navbar'>
         <div className='leftSide'>
-            <img src={AccessibilityImage}/>
+            <img src={AccessibilityImage} alt='Website Logo'/>
         </div>
         <div className='rightSide'>
-            <Link to='/'> Home </Link> 
-            <Link to='/overview'> Overview </Link> 
-            <Link to='/showcase'> Showcase </Link> 
-            <Link to='/quiz'> Quiz Yourself</Link> 
-            <Link to='/learnmore'> Learn More </Link>
+          <ul>
+            <li><Link to='/'> Home </Link></li>
+            <li><Link to='/overview'> Overview </Link></li>
+            <li><Link to='/showcase'> Showcase </Link></li>
+            <li><Link to='/quiz'> Quiz Yourself</Link></li>
+            <li><Link to='/learnmore'> Learn More </Link></li> 
+          </ul>
         </div>
-        
     </div>
   )
 }

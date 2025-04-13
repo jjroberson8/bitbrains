@@ -2,13 +2,12 @@
     width: 100%;
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
     background-color: #A3C6B6;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height:50px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
