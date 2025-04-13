@@ -16,7 +16,7 @@ function Home() {
   return (
     <>
       <title>Home - Empowering Every Click</title>
-      <div style={{ marginLeft: '220px', padding: '20px' }}>
+      <div className='main'>
         <Sidebar items={homeItems}/>
         <h1>Empowering Every Click</h1>
 

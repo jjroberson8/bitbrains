@@ -4,6 +4,11 @@ section {
     max-width: 800px; 
     line-height: 1.6; 
   }
+
+  .main {
+    margin-left: 110px;
+    padding: 20px;
+  }
   
   h2 {
     font-size: 24px; 
