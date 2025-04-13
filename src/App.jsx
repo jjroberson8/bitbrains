@@ -2,7 +2,8 @@
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router';
 import Navbar from './components/Navbar';
-import Home from './pages/Home'
+import Home from './pages/Home';
+import FeaturePage from './pages/Overview';
 import Learnmore from './pages/Learnmore';
 import Quiz from './pages/Quiz';
 import Showcase from './pages/Showcase';
@@ -17,7 +18,7 @@ function App() {
       <div className='App'>
         <Router>
           <Navbar/>
-          <div className='content-wrap'>
+          <div id ='wrap-content'>
             <Routes>
               <Route path='/' exact element={<Home/>}/>
               <Route path='/overview' exact element={<Overview/>}/>

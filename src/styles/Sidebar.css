@@ -1,0 +1,40 @@
+/* Sidebar.css */
+/* Basic styles for the side navigation */
+.sidebar {
+    width: 210px;
+    position: fixed;
+    left: 10px;
+    top: auto; 
+    background-color: #d0e1ed;
+    padding: 50px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    z-index: 100; 
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .sidebar nav ul li a:hover {
+    text-decoration: underline;
+    color: #007ACC; 
+    transform: scale(1.1);
+  }
+  
