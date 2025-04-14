@@ -6,6 +6,10 @@
     border: 1px solid #d3d3d3;
 }
 
+#main {
+ width: 50rem;
+}
+
 .title {
     font-weight: 700;
     margin-bottom: 1.5rem;

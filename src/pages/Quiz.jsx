@@ -1,6 +1,6 @@
 import React from 'react';
 import { DataProvider } from '../context/dataContext.jsx';
-import Sidenbar from '../components/Sidebar';
+import Sidebar from '../components/Sidebar';
 import QuizBuilder from '../components/QuizBuilder';
 import QuizStart from '../components/QuizStart';
 import QuizResult from '../components/QuizResult';
@@ -17,8 +17,8 @@ function Quiz() {
 
   return (
     <div className='main'>
-      <Sidenbar items={homeItems}/>
-      <main id="main" lang="en">
+      <Sidebar items={homeItems}/>
+      <h2> Take a quiz to see how much you know! </h2>
         <DataProvider>
           <QuizStart/>
 
@@ -26,7 +26,7 @@ function Quiz() {
 
           <QuizResult/>
         </DataProvider>
-      </main>
+         
     </div>
   )
 }
