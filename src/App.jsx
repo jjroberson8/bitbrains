@@ -18,7 +18,7 @@ function App() {
       <div className='App'>
         <Router>
           <Navbar/>
-          <div id ='wrap-content'>
+          <div className='wrap-content'>
             <Routes>
               <Route path='/' exact element={<Home/>}/>
               <Route path='/overview' exact element={<Overview/>}/>
