@@ -16,7 +16,9 @@ function Quiz() {
 
   return (
     <>
-    <title>Accessibilit Quiz</title>
+    <title>Accessibility Quiz</title>
+    <meta name='description' content='Quiz on Accessibility Information'/>
+    <meta name='keywords' content='Accessibility, Quiz'/>
     <div className='main'>
       {isRendered ? (
         <Sidebar items={getHeaders()}/> ) : ( <p> Rendering </p>)}
