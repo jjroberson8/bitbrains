@@ -1,24 +1,27 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { DataProvider } from '../context/dataContext.jsx';
 import Sidebar from '../components/Sidebar';
 import QuizBuilder from '../components/QuizBuilder';
 import QuizStart from '../components/QuizStart';
 import QuizResult from '../components/QuizResult';
+import getHeaders from '../helper_functions/getHeaders.jsx';
 import '../styles/Quiz.css'
 
 function Quiz() {
-  const homeItems = [ // array of objects containing href and label properties for each section of the page
-    { href: '#accessibility-matters', label: 'Accessibility Matters' },
-    { href: '#web-accessibility', label: 'What is Web Accessibility?' },
-    { href: '#importance', label: 'Why is Web Accessibility Important?' },
-    { href: '#commitment', label: 'Our Commitment' },
-    { href: '#get-involved', label: 'Get Involved' },
-  ];
+  const [isRendered, setIsRendered] = useState(false);
+
+  useEffect(() => {
+    setIsRendered(true);
+  }), [];
 
   return (
+    <>
+    <title>Accessibilit Quiz</title>
     <div className='main'>
-      <Sidebar items={homeItems}/>
-      <h2> Take a quiz to see how much you know! </h2>
+      {isRendered ? (
+        <Sidebar items={getHeaders()}/> ) : ( <p> Rendering </p>)}
+      {/*<Sidebar items={sideBarItems}/>*/}
+      <h2 id='Take-Quiz'> Take the Quiz </h2>
         <DataProvider>
           <QuizStart/>
 
@@ -28,7 +31,9 @@ function Quiz() {
         </DataProvider>
          
     </div>
+    </>
   )
 }
+
 
 export default Quiz

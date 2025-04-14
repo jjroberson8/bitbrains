@@ -18,11 +18,11 @@ function Navbar() {
         {/*Add alts to the icons for accessibility */}
         <div className='rightSide'>
         <ul className='nav-menu'>
-            <Link to='/'> <FontAwesomeIcon icon={faHouse} /> Home </Link> 
-            <Link to='/overview'><FontAwesomeIcon icon={faBookOpen} /> Overview </Link> 
+            <Link to='/'> <FontAwesomeIcon icon={faHouse} alt='Home icon'/> Home </Link> 
+            <Link to='/overview'><FontAwesomeIcon icon={faBookOpen} alt='Book icon'/> Overview </Link> 
             <Link to='/showcase'> Showcase </Link> 
-            <Link to='/quiz'><FontAwesomeIcon icon={faClipboardQuestion} /> Quiz Yourself</Link> 
-            <Link to='/learnmore'><FontAwesomeIcon icon={faCircleInfo} /> Learn More </Link>
+            <Link to='/quiz'><FontAwesomeIcon icon={faClipboardQuestion} alt='Clipboard icon'/> Quiz Yourself</Link> 
+            <Link to='/learnmore'><FontAwesomeIcon icon={faCircleInfo} alt='Info icon'/> Learn More </Link>
         </ul>
         </div>
     </div>

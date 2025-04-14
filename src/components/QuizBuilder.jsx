@@ -10,7 +10,7 @@ const QuizBuilder = () => {
             <div className="quizbox">
               <div className="scorebar">Question: {quizs.indexOf(question) + 1} / {quizs?.length}</div>
               <div className="questionbar">
-                <h2 className='left'>{question?.question}</h2>
+                <h3 className='left'>{question?.question}</h3>
               </div>
               <div className='questionsbox'>
                 {question?.options?.map((item, index) => 

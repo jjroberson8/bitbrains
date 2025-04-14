@@ -1,23 +1,22 @@
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import getHeaders from '../helper_functions/getHeaders';
 import '../styles/Home.css';
 import Sidebar from '../components/Sidebar';
 
-
-const homeItems = [ // array of objects containing href and label properties for each section of the page
-    { href: '#accessibility-matters', label: 'Accessibility Matters' },
-    { href: '#web-accessibility', label: 'What is Web Accessibility?' },
-    { href: '#importance', label: 'Why is Web Accessibility Important?' },
-    { href: '#commitment', label: 'Our Commitment' },
-    { href: '#get-involved', label: 'Get Involved' },
-  ];
-  
 function Home() {
+  const [isRendered, setIsRendered] = useState(false);
+  
+    useEffect(() => {
+      setIsRendered(true);
+    }), [];
+
   return (
     <>
       <title>Home - Empowering Every Click</title>
       <div className='main'>
-        <Sidebar items={homeItems}/>
+        {isRendered ? (
+        <Sidebar items={getHeaders()}/> ) : ( <p> Rendering </p>)}
         <h1>Empowering Every Click</h1>
 
         <h2 id="accessibility-matters">Accessibility Matters</h2>

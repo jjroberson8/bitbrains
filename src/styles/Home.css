@@ -6,6 +6,7 @@ section {
   }
 
   .main {
+    display: inline-block;
     margin-left: 20px;
     padding: 15px;
   }

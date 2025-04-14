@@ -14,16 +14,16 @@ function Footer() {
       </div>
       <div className='socialMedia'>
         <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faTiktok} />
+          <FontAwesomeIcon icon={faTiktok} alt='Tiktok Logo'/>
         </a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon icon={faTwitter} alt='Twitter Logo'/>
         </a>
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faFacebook} />
+          <FontAwesomeIcon icon={faFacebook} alt='Facebook Logo'/>
         </a>
         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faLinkedin} />
+          <FontAwesomeIcon icon={faLinkedin} alt='Linkedin Logo'/>
         </a>
       </div>
     </div>
