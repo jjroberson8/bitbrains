@@ -9,17 +9,32 @@ import '../styles/Navbar.css';
 
 function Navbar() {
   const [openLinks, setOpenLinks] = useState(false);
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+  var handleResizeWithTimeout = debounce(function() {
+    if (window.innerWidth > 900 && openLinks == true) {
+      toggleNavbar();
+    }
+  }, 100); 
+
   const toggleNavbar = () => {
     setOpenLinks(!openLinks)
   }
 
-    const handleResize = () => {
-      if (window.innerWidth > 900 && openLinks == true) {
-        toggleNavbar();
-      }
-    }
-
-  window.addEventListener("resize", handleResize); 
+  window.addEventListener("resize", handleResizeWithTimeout); 
 
   return (
     <div className='navbar' role='navigation'>
