@@ -14,7 +14,7 @@ function Home() {
   return (
     <>
       <title>Home - Empowering Every Click</title>
-      <div className='main'>
+      <div className='main' role='main'>
         {isRendered ? (
         <Sidebar items={getHeaders()}/> ) : ( <p> Rendering </p>)}
         <h1>Empowering Every Click</h1>

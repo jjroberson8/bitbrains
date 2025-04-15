@@ -5,7 +5,7 @@ function Overview() {
     <>
     <title> This is the Overview page!</title>
 
-    <div>
+    <div className='main' role='main'>
       <h1> Overview </h1>
       <p>Welcome to the Overview Page!</p> 
       <p>Here you will find a brief introduction about the types website accessibility

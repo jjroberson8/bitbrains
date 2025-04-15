@@ -1,29 +1,42 @@
-import React from 'react';
-import {Link} from 'react-router';
+import React, { useState } from 'react';
+import NavMenu from './NavMenu';
 import AccessibilityImage from '../assets/accessibilityLogo.png';
-import '../styles/Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faBookOpen, faClipboardQuestion,faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import '../styles/Navbar.css';
+
 
 
 function Navbar() {
+  const [openLinks, setOpenLinks] = useState(false);
+  const toggleNavbar = () => {
+    setOpenLinks(!openLinks)
+  }
+
+    const handleResize = () => {
+      if (window.innerWidth > 900 && openLinks == true) {
+        toggleNavbar();
+      }
+    }
+
+  window.addEventListener("resize", handleResize); 
+
   return (
-    <div className='navbar'>
-        <div className='leftSide'>
+    <div className='navbar' role='navigation'>
+        <div className='leftSide' id={openLinks? "open" : "close"}>
           <img src={AccessibilityImage} alt='Website Logo'/>
-          <h1 className='navbar-logo'>Bit Brains</h1>
+          <h1 className='navbar-logo'> Bit Brains</h1>
+          <div className='hiddenLinks'>
+            <NavMenu/>
+          </div>
         </div>
 
-        
         {/*Add alts to the icons for accessibility */}
         <div className='rightSide'>
-        <ul className='nav-menu'>
-            <Link to='/'> <FontAwesomeIcon icon={faHouse} alt='Home icon'/> Home </Link> 
-            <Link to='/overview'><FontAwesomeIcon icon={faBookOpen} alt='Book icon'/> Overview </Link> 
-            <Link to='/showcase'> Showcase </Link> 
-            <Link to='/quiz'><FontAwesomeIcon icon={faClipboardQuestion} alt='Clipboard icon'/> Quiz Yourself</Link> 
-            <Link to='/learnmore'><FontAwesomeIcon icon={faCircleInfo} alt='Info icon'/> Learn More </Link>
-        </ul>
+          <NavMenu/>
+          <button className='links-btn' onClick={toggleNavbar} aria-label='Links Button'>
+            <FontAwesomeIcon icon={faBars} size='2xl' alt='Bars icon'/>
+          </button>
         </div>
     </div>
   )

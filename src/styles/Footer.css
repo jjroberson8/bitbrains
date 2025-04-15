@@ -32,6 +32,29 @@
   text-decoration: none; /* Remove underline if using links */
 }
 
+.assistive-text {
+  /* Hide text from non-assitive text users*/ 
+  height: 1px; 
+  width: 1px; 
+  position: absolute; 
+  overflow: hidden; 
+  top: -10px;
+}
+
+.contact-us{
+  text-decoration: none;
+  font-weight: bold; /* Emphasize to show Link */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.contact-us:hover{
+  /* Show link is hovered */
+  text-decoration: underline;
+  color: #007ACC; 
+  transform: scale(1.1);
+}
+
 .socialMedia a:hover {
   color: rgb(204, 0, 255); /* Change color when hovered (optional) */
 }

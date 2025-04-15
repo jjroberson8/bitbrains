@@ -22,7 +22,7 @@ const QuizBuilder = () => {
               </div>
                 {(questionIndex + 1) !== quizs.length ?
                 <button className='nextBtn' onClick={nextQuestion} disabled={!selectedAnswer} aria-label='Next Question Button'>Next Question</button> :
-                <button className='resultBtn' onClick={showResults} disabled={!selectedAnswer}aria-label='Show Results Button'>Show Result</button>
+                <button className='resultBtn' onClick={showResults} disabled={!selectedAnswer} aria-label='Show Results Button'>Show Result</button>
                 }
             </div>
     </section>
