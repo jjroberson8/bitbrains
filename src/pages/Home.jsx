@@ -23,7 +23,6 @@ function Home() {
 
       <div className="home-page">
 
-      <div className="wrap-content">
         {isRendered ? (
           <Sidebar items={getHeaders()} />
         ) : (
@@ -140,7 +139,6 @@ function Home() {
             url="/learnmore"
           />
           </section>
-        </div>
        </div>
       </div>
     </>

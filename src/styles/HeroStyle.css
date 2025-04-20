@@ -2,7 +2,7 @@
 .hero, .hero-mid {
     position: relative;
     width: 100%;
-    min-height: 60vh; /* A minimum height to ensure content visibility */
+    min-height: 40vh; /* A minimum height to ensure content visibility */
     overflow: hidden;
   }
 

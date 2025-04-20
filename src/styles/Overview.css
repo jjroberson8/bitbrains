@@ -43,13 +43,12 @@ section {
   
   @media (max-width: 768px) {
     .sidebar {
-        width: 250px; 
+        width: 205px; 
         left: 5px; /* Ensure it fits smaller screens */
-        top: 200px; 
     }
 
     div[style] {
-        margin-left: 0; /* Disable margin offset for main content */
+        margin-left: 150px; /* Disable margin offset for main content */
         padding: 10px; 
     }
 }

@@ -22,7 +22,6 @@ function Learnmore() {
         content="An exhaustive compendium on web accessibility including guidelines (WCAG, ARIA), historical context, best practices, coding examples, and tools to create an inclusive web experience."
       />
       <div className="learnmore-page">
-      <div className="wrap-content">
         {isRendered ? (
           <Sidebar items={getHeaders()} />
         ) : (
@@ -248,7 +247,6 @@ function Learnmore() {
               </li>
             </ul>
           </section>
-         </div>
         </div>
       </div>
     </>

@@ -6,6 +6,11 @@ section {
   box-sizing: border-box;    /* Include padding in the element’s total width */
 }
 
+
+.home-page {
+  padding-top: 15px;
+}
+
  .home-page .main {
     display: inline-block;
     margin-left: 20px;

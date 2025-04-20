@@ -2,6 +2,7 @@
 
 /* Define variables scoped only to the Learn More page container */
 .learnmore-page {
+  padding-top: 15px;
     --color-background: #ffffff;
     --color-text: #333333;
     --color-border: #a9cccc;
