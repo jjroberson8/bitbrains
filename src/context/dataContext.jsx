@@ -46,9 +46,17 @@ export const DataProvider = ({children}) => {
 
         if (selected === question.answer) {
             event.target.classList.add('success');
+            let correctResult = document.createElement('span')
+            correctResult.classList.add('question-result');
+            correctResult.innerText = ' Correct!';
+            event.target.appendChild(correctResult);
             setScore(score + 1);
         } else {
             event.target.classList.add('danger');
+            let wrongResult = document.createElement('span')
+            wrongResult.classList.add('question-result');
+            wrongResult.innerText = ' Wrong Answer';
+            event.target.appendChild(wrongResult);
         }
     }
   }

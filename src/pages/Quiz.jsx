@@ -23,7 +23,7 @@ function Quiz() {
       {isRendered ? (
         <Sidebar items={getHeaders()}/> ) : ( <p> Rendering </p>)}
       {/*<Sidebar items={sideBarItems}/>*/}
-      <h2 id='Take-Quiz'> Take the Quiz </h2>
+      <h2 id='take-quiz'> Take the Quiz </h2>
         <DataProvider>
           <QuizStart/>
 

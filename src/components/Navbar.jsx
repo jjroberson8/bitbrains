@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NavMenu from './NavMenu';
+import NavMenu from '../context/NavMenu';
 import AccessibilityImage from '../assets/accessibilityLogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -28,7 +28,7 @@ function Navbar() {
     if (window.innerWidth > 900 && openLinks == true) {
       toggleNavbar();
     }
-  }, 100); 
+  }, 10); 
 
   const toggleNavbar = () => {
     setOpenLinks(!openLinks)
