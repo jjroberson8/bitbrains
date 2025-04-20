@@ -35,8 +35,4 @@ section {
         top: 200px; 
     }
 
-    div[style] {
-        margin-left: 0; /* Disable margin offset for main content */
-        padding: 10px; 
-    }
 }

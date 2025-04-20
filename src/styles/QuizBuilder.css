@@ -1,10 +1,12 @@
 .quizSection {
+    width: 1000px;
     padding: 1rem;
     color: black;
     text-align: center;
     background-color: #D0E1ED;
     border:2px solid #d3d3d3;
     height: fit-content;
+    margin-right: 250px;
 }
 
 .quizbox {
@@ -53,33 +55,11 @@ button {
     padding-left: 1rem;
     width: 100%;
     margin-top: 1rem;
-    background-color:#A3C6B6;
-}
-
-.option {
-    background-color:#A3C6B6;
-}
-
-.nextBtn {
-    background-color: rgb(136, 153, 228);
-    text-align: center;
-}
-
-.resultBtn {
-    background-color: rgb(136, 153, 228);
-    text-align: center;
+    background-color:white;
 }
 
 button:hover {
     cursor: pointer;
-}
-
-.danger {
-    background-color: #dc3545;
-}
-
-.success {
-    background-color: #198754;
 }
 
 button:disabled {
@@ -87,7 +67,65 @@ button:disabled {
     opacity: .65;
 }
 
+.option {
+    background-color:white;
+    font-weight: bold;
+}
+
+.nextBtn {
+    background-color: hsl(27, 84%, 52%);
+    text-align: center;
+}
+
+.resultBtn {
+    background-color: #8AAAE5;
+    text-align: center;
+}
+
+.danger {
+    background-color: #dc3545;
+}
+
+.danger .question-result {
+   float: right;
+}
+
+.success {
+    background-color: #198754;
+}
+
+.success .question-result {
+    float: right;
+}
+@media only screen and (max-width: 1500px) {
+
+    /* Make box small for smaller screen */
+    .quizSection {
+        width: 700px;
+        margin-right: 200px;
+    }
+    
+}
+
+
+/* Make the quiz relative to screen size for accessibility*/
+@media only screen and (max-width: 1200px) {
+
+    /* Make box small for smaller screen */
+    .quizSection {
+        width: 450px;
+        margin-right: 200px;
+        margin-left: 150px;
+    }
+    
+}
+
 @media only screen and (max-width: 900px) {
+    .quizSection {
+        width: 350px;
+        margin-right: 200px;
+        margin-left: 175px;
+    }
     .scorebar {
         margin-top: 0;
         margin-bottom: 0;
@@ -101,4 +139,13 @@ button:disabled {
     .questionsbox button {
         margin-top: .5rem;
     }
-  }
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* Make box really small for smalest screens */
+    .quizSection {
+        width: 300px;
+    }
+    
+}
