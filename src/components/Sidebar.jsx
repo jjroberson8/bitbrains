@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/Sidebar.css';
-import { useLocation} from 'react-router'
+import { useLocation } from 'react-router';
 
-function Sidebar({ items }) {
-  let location = useLocation();
+function Sidebar ({ items })  {
+  const location = useLocation();
   return (
     <div className="sidebar">
       <ul>

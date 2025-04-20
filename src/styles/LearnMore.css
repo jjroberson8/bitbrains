@@ -1,0 +1,99 @@
+/* LearnMore.css - Scoped exclusively to the Learn More page */
+
+/* Define variables scoped only to the Learn More page container */
+.learnmore-page {
+    --color-background: #ffffff;
+    --color-text: #333333;
+    --color-border: #a9cccc;
+    --color-focus: rgb(4, 2, 2);
+    --font-base-size: 16px;
+    --line-height-base: 1.6;
+  }
+  
+  /* Ensure all descendant elements use a consistent box-sizing */
+  .learnmore-page * {
+    box-sizing: border-box;
+  }
+  
+  /* Layout container for the sidebar and main content */
+  .learnmore-page .wrap-content {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    background-color: var(--color-background);
+  }
+  
+
+  
+  /* Table styling with proper spacing and contrast */
+  .learnmore-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  
+  .learnmore-page table thead {
+    background-color: var(--color-border);
+  }
+  
+  .learnmore-page table,
+  .learnmore-page th,
+  .learnmore-page td {
+    border: 1px solid var(--color-border);
+  }
+  
+  .learnmore-page th,
+  .learnmore-page td {
+    padding: 0.75rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  /* Preformatted text (code blocks) styling */
+  .learnmore-page pre {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    font-family: Consolas, monospace;
+    white-space: pre-wrap;
+    border-left: 5px solid var(--color-border);
+    margin-bottom: 1rem;
+  }
+  
+  /* Link styling with accessible focus states */
+  .learnmore-page a,
+  .learnmore-page a:visited {
+    color: var(--color-focus);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+
+  /* Make checkboxes larger within the learnmore-page */
+.learnmore-page input[type="checkbox"] {
+    /* Increase the scale to make the checkbox bigger */
+    transform: scale(1.5);
+    /* Optionally adjust the margin to keep spacing consistent */
+    margin-right: 0.5em;
+    /* Remove any default appearance if needed (optional) */
+    -webkit-appearance: checkbox;
+    appearance: checkbox;
+  }
+
+  
+  
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .learnmore-page .wrap-content {
+      flex-direction: column;
+    }
+    .learnmore-page .sidebar {
+      flex: 1 1 100%;
+      border-right: none;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .learnmore-page .main {
+      padding: 1rem;
+    }
+  }
+  
