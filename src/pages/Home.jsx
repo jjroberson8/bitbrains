@@ -29,7 +29,7 @@ function Home() {
           <p>Rendering Sidebar...</p>
         )}
 
-        <div className="main" role="main">
+        <main className="main" role="main">
 
           <section>
             <h1>Empowering Every Click</h1>
@@ -139,7 +139,7 @@ function Home() {
             url="/learnmore"
           />
           </section>
-       </div>
+       </main>
       </div>
     </>
   );

@@ -16,12 +16,11 @@ function Overview() {
   return (
     <>
     <Helmet>
-    <title>Overview</title>
-    <meta name='description' content='Overview on Web Accessability'/>
-    <meta name='keywords' content='Accessability, Overview'/>
+      <title>Overview</title>
+      <meta name='description' content='Overview on Web Accessibility'/>
+      <meta name='keywords' content='Accessibility, Overview'/>
     </Helmet>
-
-    <div className='main' role='main'>
+    <main className='main' role='main'>
       <Suspense>
       {isRendered ? (
         <Sidebar items={getHeaders()}/> ) : ( <p> Rendering </p>)}
@@ -132,7 +131,7 @@ function Overview() {
         </ul>
       </h3>
       </section>
-    </div>
+    </main>
     </>
   )
 }

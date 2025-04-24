@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import Sidebar from '../components/Sidebar';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet'
 import getHeaders from '../helper_functions/getHeaders';
 import Hero from '../components/Hero';
 import '../styles/LearnMore.css';
 import accessibilityLogo from '../assets/accessibilitylogo.png'; // Placeholder for the logo image
+
+const Sidebar = lazy(()=> import('../components/Sidebar'));
 
 function Learnmore() {
   const [isRendered, setIsRendered] = useState(false);
@@ -16,19 +18,20 @@ function Learnmore() {
   return (
     <>
       {/* Setting detailed page metadata for SEO and clarity */}
-      <title>Learn More - In-Depth Web Accessibility Guide</title>
-      <meta
-        name="description"
-        content="An exhaustive compendium on web accessibility including guidelines (WCAG, ARIA), historical context, best practices, coding examples, and tools to create an inclusive web experience."
-      />
+      <Helmet>
+        <title>Learn More - In-Depth Web Accessibility Guide</title>
+        <meta
+          name="description"
+          content="An exhaustive compendium on web accessibility including guidelines (WCAG, ARIA), historical context, best practices, coding examples, and tools to create an inclusive web experience."
+        />
+        <meta name='keywords' content='Accessibility, Examples'/>
+      </Helmet>
       <div className="learnmore-page">
-        {isRendered ? (
-          <Sidebar items={getHeaders()} />
-        ) : (
-          <p>Loading Sidebar...</p>
-        )}
+      <Suspense fallback={<p> Loading Sidebar... </p>}>
+        {isRendered &&<Sidebar items={getHeaders()}/>}
+      </Suspense>
 
-        <div className="main" role="main">
+        <main className="main" role="main">
           
           {/* 1. Introduction */}
           <section>
@@ -247,7 +250,7 @@ function Learnmore() {
               </li>
             </ul>
           </section>
-        </div>
+        </main>
       </div>
     </>
   );
