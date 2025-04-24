@@ -5,6 +5,8 @@
   position: fixed;
   left: 10px;
   top: auto; 
+  max-height: 600px;
+  overflow-y: auto;
   background-color: #d0e1ed;
   padding: 40px;
   border: 1px solid #ddd;
