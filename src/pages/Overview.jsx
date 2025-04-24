@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense, lazy } from 'react'
+import { Helmet } from 'react-helmet';
 import getHeaders from '../helper_functions/getHeaders';
 import '../styles/Overview.css';
-import Sidebar from '../components/Sidebar';
+
+const Sidebar = lazy(() => import('../components/Sidebar'));
 
 
 function Overview() {
@@ -13,12 +15,18 @@ function Overview() {
 
   return (
     <>
+    <Helmet>
     <title>Overview</title>
     <meta name='description' content='Overview on Web Accessability'/>
     <meta name='keywords' content='Accessability, Overview'/>
+    </Helmet>
+
     <div className='main' role='main'>
+      <Suspense>
       {isRendered ? (
         <Sidebar items={getHeaders()}/> ) : ( <p> Rendering </p>)}
+      </Suspense>
+      
       <h1> Understanding Web Accessibility</h1>
       <h2>How Does It Help Me?</h2>
       <p>Web accessibility  can come in many types and forms, 
@@ -46,12 +54,19 @@ function Overview() {
           <ul>
             Examples of Accessibility Catergories for Vision
             <li>Text</li>
-            <ul id ="subtext">Font Size, Spacing, Color/Contrast, Style, Length</ul>
+            <li id ="subtext">Appropriate Font Size (Not too big or small)</li>
+            <li id ="subtext">Spacing (Letters aren't clustered or too far apart)</li>
+            <li id ="subtext">Color/Contrast (Text color and contrast to background is readable)</li>
+            <li id ="subtext">Style (Text style is understandable)</li>
+            <li id ="subtext">Length (Text goes to a new line after a certain length)</li>
           </ul>
 
           <ul>
           <li>Website Page</li>
-          <ul id ="subtext">Brightness, Text Rewrap, UI, Alignment, Border </ul>
+          <li id ="subtext">Brightness (Page isn't too bright or dark)</li>
+          <li id ="subtext">UI (Simple to navigate)</li>
+          <li id ="subtext">Alingnment (Page is well structured and flows nicely)</li>
+          <li id ="subtext">Border (Text box borders are spaced well from each other)</li>
           </ul> 
         </h3>
       </section>
