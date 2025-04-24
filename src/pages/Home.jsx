@@ -51,7 +51,7 @@ function Home() {
             </p>
             <img
               className="center-image"
-              src="src/assets/six-figs.png"
+              src={import.meta.env.BASE_URL  + "src/assets/six-figs.png"}
               alt="Six people representing various disabilities. Each character is represented."
             />
             <p>
@@ -67,7 +67,7 @@ function Home() {
             </p>
             <img
               className="side-image"
-              src="src\assets\tech.png"
+              src={import.meta.env.BASE_URL  + "src\assets\tech.png"}
               alt="Accessibility illustration"
             />
             <ul>
@@ -113,7 +113,7 @@ function Home() {
             <h2 id="get-involved">Get Involved</h2>
             <img
               className="side-image"
-              src="src\assets\students.png"
+              src={import.meta.env.BASE_URL + "src\assets\students.png"}
               alt="Students with different disabilities working together"
             />
             <p>
