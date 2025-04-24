@@ -10,6 +10,9 @@
   border-radius: 13px;
  
 }
+.navbar h1 {
+  font-size: 2em;
+}
 
 .navbar .leftSide {
   flex: 50%;

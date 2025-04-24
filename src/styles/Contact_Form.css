@@ -47,3 +47,12 @@
 .formStatus.failed {
     background-color: red;
 }
+
+span.invalid {
+    color: red;
+    margin: 12px;
+}
+span.valid {
+    color: green;
+    margin: 12px;
+}

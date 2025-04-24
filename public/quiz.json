@@ -1,112 +1,112 @@
 [
     {
         "id": "01",
-        "question" : "Which of the following is the correct name of React.js?",
+        "question" : "What is the name of the web content accessibility guidlines site?",
         "options": [
-            "React",
-            "React.js",
-            "ReactJS",
-            "All of the above"
+            "WCAG",
+            "WAI",
+            "W3C",
+            "All of the above."
         ],
-        "answer": "All of the above"
+        "answer": "WCAG"
     },
     {
         "id": "02",
-        "question" : "Which of the following are the advantages of React.js?",
+        "question" : "Which of the following is in the main accessibility types?",
         "options": [
-            "React.js can increase the application's performance with Virtual DOM.",
-            "React.js is easy to integrate with other frameworks such as Angular, BackboneJS since it is only a view library.",
-            "React.js can render both on client and server side.",
-            "All of the above"
+            "Eyesight Accessibility",
+            "Hearing Accessibility",
+            "Keyboard Accessibility",
+            "All of the above."
         ],
-        "answer": "All of the above"
+        "answer": "All of the above."
     },
     {
         "id": "03",
-        "question" : "Which of the following is not a disadvantage of React.js?",
+        "question" : "What contrast ratio is the standard of a AA rating?",
         "options": [
-            "React.js has only a view layer. We have put your code for Ajax requests, events and so on.",
-            "The library of React.js is pretty large.",
-            "The JSX in React.js makes code easy to read and write.",
-            "The learning curve can be steep in React.js."
+            "Any ratio",
+            "7 : 1",
+            "4.5 : 1",
+            "21 : 1"
         ],
-        "answer": "The JSX in React.js makes code easy to read and write."
+        "answer": "4.5 : 1"
     },
     {
         "id": "04",
-        "question" : "Which of the following command is used to install create-react-app?",
+        "question" : "What does aria stand for?",
         "options": [
-            "npm install -g create-react-app",
-            "npx create-react-app my-app",
-            "npm install create-react-app",
-            "npm install -f create-react-app"
+            "Assitive Rich Internet Applications",
+            "Assisive Reading In Applications",
+            "Archie Reads In Aisles",
+            "None of the above."
         ],
-        "answer": "npx create-react-app my-app"
+        "answer": "Assitive Rich Internet Applications"
     },
     {
         "id": "05",
-        "question" : "What of the following is used in React.js to increase performance?",
+        "question" : "What features are expected to ensure forms are accessible by assisstive technology?",
         "options": [
-            "Original DOM",
-            "Virtual DOM",
-            "Both A and B.",
-            "None of the above."
+            "Labels",
+            "Aria tags",
+            "Accessible error messages",
+            "All of the above."
         ],
-        "answer": "Virtual DOM"
+        "answer": "All of the above."
     },
     {
         "id": "06",
-        "question" : "What is the default port where webpack-server runs?",
+        "question" : "On a website, all images and videos should have ____ text to describe what is being presented?",
         "options": [
-            "3000",
-            "8080",
-            "3030",
-            "6060"
+            "descriptive",
+            "alt",
+            "src",
+            "aria-label"
         ],
-        "answer": "3000"
+        "answer": "alt"
     },
     {
         "id": "07",
-        "question" : "How many numbers of elements a valid react component can return?",
+        "question" : "What key on the keyboard is used to assess the keyboard accessibility of a website?",
         "options": [
-            "1",
-            "2",
-            "3",
-            "Unlimited"
+            "Shift",
+            "Tab",
+            "Ctrl",
+            "None of the above."
         ],
-        "answer": "1"
+        "answer": "Tab"
     },
     {
         "id": "08",
-        "question" : "What is the declarative way to render a dynamic list of components based on values in an array?",
+        "question" : "What is the focus of this website?",
         "options": [
-            "Using the reduce array method",
-            "Using the <Each /> component",
-            "Using the Array.map() method",
-            "With a for/while loop"
+            "I don't know.",
+            "Teach about Web Accessibility.",
+            "To get a good grade.",
+            "All of the above."
         ],
-        "answer": "Using the Array.map() method"
+        "answer": "Teach about Web Accessibility."
     },
     {
         "id": "09",
-        "question" : "What is a state in React?",
+        "question" : "Who can make use of web accessibility?",
         "options": [
-            "A permanent storage.",
-            "Internal storage of the component.",
-            "External storage of the component.",
-            "None of the above."
+            "Developers",
+            "Managers",
+            "Thomas",
+            "Anyone"
         ],
-        "answer": "Internal storage of the component."
+        "answer": "Anyone"
     },
     {
         "id": "10",
-        "question" : "What are the two ways to handle data in React?",
+        "question" : "Why is web accessibility important?",
         "options": [
-            "State & Props",
-            "Services & Components",
-            "State & Services",
-            "State & Component"
+            "Allows for anyone to access websites.",
+            "I'm morally obligated.",
+            "I need to be able to access my website?",
+            "None of the above."
         ],
-        "answer": "State & Props"
+        "answer": "Allows for anyone to access websites."
     }
 ]

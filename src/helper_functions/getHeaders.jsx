@@ -1,4 +1,3 @@
-import Sidebar from "../components/Sidebar";
 
 function getHeaders() {
   
