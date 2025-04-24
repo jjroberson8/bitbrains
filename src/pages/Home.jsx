@@ -4,6 +4,7 @@ import '../styles/Home.css';
 import Sidebar from '../components/Sidebar';
 import Hero from '../components/Hero';
 import computer from "../assets/computer.jpg";
+import sixfigs from '../assets/six-figs.png';
 
 function Home() {
   const [isRendered, setIsRendered] = useState(false);
@@ -51,7 +52,7 @@ function Home() {
             </p>
             <img
               className="center-image"
-              src={import.meta.env.BASE_URL  + "src/assets/six-figs.png"}
+              src={sixfigs}
               alt="Six people representing various disabilities. Each character is represented."
             />
             <p>
