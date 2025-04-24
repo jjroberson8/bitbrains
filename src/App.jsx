@@ -20,7 +20,7 @@ function App() {
           <Navbar/>
           <div className='wrap-content'>
             <Routes>
-              <Route path='/' exact element={<Home/>}/>
+              <Route path='/bitbrains/' exact element={<Home/>}/>
               <Route path='/overview' exact element={<Overview/>}/>
               <Route path='/showcase' exact element={<Showcase/>}/>
               <Route path='/quiz' exact element={<Quiz/>}/>
