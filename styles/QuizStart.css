@@ -1,0 +1,76 @@
+.start {
+    /* General information to be passed to children*/
+    padding: 1rem;
+    color: black;
+    text-align: center;
+    background-color: #D0E1ED;
+    border: 1px solid #d3d3d3;
+    width: 1000px;
+    margin-right: 225px;
+}
+
+.title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.startBox {
+    align-items: center;
+}
+
+
+button {
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 1500px) {
+
+    /* Make box small for smaller screen */
+    .start {
+        width: 700px;
+    }
+    
+}
+
+
+/* Make the quiz relative to screen size for accessibility*/
+@media only screen and (max-width: 1200px) {
+
+    /* Make box small for smaller screen */
+    .start {
+        width: 600px;
+        margin-left: 70px;
+        margin-right: 175px;
+    }
+    
+}
+
+@media only screen and (max-width: 900px) {
+
+    /* Make box small for smaller screen */
+    .start {
+        width: 400px;
+        margin-left: 150px;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* Make box really small for smalest screens */
+    .start {
+        width: 300px;
+        margin-left: 200px;
+    }
+    
+}

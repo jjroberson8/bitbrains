@@ -1,0 +1,85 @@
+section {
+  width: 100%;               /* Take up full width of its container */
+  max-width: 1200px;         /* Limit the width for readability on large screens */
+  margin: 0 auto;            /* Center the section horizontally */
+  padding: 20px 30px;        /* Vertical padding ( top & bottom) and horizontal padding (20px left & right) */
+  box-sizing: border-box;    /* Include padding in the element’s total width */
+}
+
+
+.home-page {
+  padding-top: 15px;
+}
+
+ .home-page .main {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 15px;
+  }
+  
+  .home-page h1 {
+    font-size: 40px; 
+    margin-bottom: 10px;
+    color: #000000; 
+  }
+
+ .home-page h2 {
+    font-size: 30px; 
+    margin-bottom: 10px;
+    color: #000000; 
+  }
+
+  .home-page p{
+    font-size: 1rem; 
+    color: #000000; 
+    line-height: 1.6;        
+    margin-bottom: 1em;      
+  }
+
+  
+ ul {
+  list-style-type: disc;
+  padding-left: 1.25rem; /* roughly 20px if the root font-size is 16px */
+}
+
+ li {
+  margin-bottom: 1rem;   /* gives more vertical space */
+  font-size: 1rem;       /* allows scaling with user settings */
+  line-height: 1.5;      /* improves readability */
+  color: #000;           /* ensure high contrast on light backgrounds */
+}
+ 
+
+.side-image {
+    float: right;           /* Floats the image to the right */
+    margin-left: 20px;        /* Adds space between the image and the text */
+    width: 350px;           /* Set your desired width */
+    height: 200%; 
+    margin-bottom: 30px;          /* Maintains the aspect ratio */
+  }
+
+.center-image {
+    display: block;        /* Centers the image */
+    margin: 0 auto;  
+    margin-bottom: 5%;
+    height: auto;         /* Maintains the aspect ratio */
+    width: 90%;            
+    height: auto;           
+  }
+
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 800px) {
+     .wrap-content {
+      display: flex;
+    }
+      .sidebar {
+      flex: 1 1 100%;
+      border-right: none;
+      border-bottom: 1px solid var(--color-border);
+    }
+   .home-page .main {
+      padding: 1rem;
+    }
+  }
+  
