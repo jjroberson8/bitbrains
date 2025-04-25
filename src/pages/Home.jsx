@@ -4,7 +4,9 @@ import '../styles/Home.css';
 import Sidebar from '../components/Sidebar';
 import Hero from '../components/Hero';
 import computer from "../assets/computer.jpg";
-import sixfigs from '../assets/six-figs.png';
+import sixFigs from "../assets/six-figs.png";
+import students from "../assets/students.png";
+import tech from "../assets/tech.png";
 
 function Home() {
   const [isRendered, setIsRendered] = useState(false);
@@ -52,7 +54,7 @@ function Home() {
             </p>
             <img
               className="center-image"
-              src={sixfigs}
+              src={sixFigs}
               alt="Six people representing various disabilities. Each character is represented."
             />
             <p>
@@ -68,7 +70,7 @@ function Home() {
             </p>
             <img
               className="side-image"
-              src={import.meta.env.BASE_URL  + "src\assets\tech.png"}
+              src={tech}
               alt="Accessibility illustration"
             />
             <ul>
@@ -114,7 +116,7 @@ function Home() {
             <h2 id="get-involved">Get Involved</h2>
             <img
               className="side-image"
-              src={import.meta.env.BASE_URL + "src\assets\students.png"}
+              src={students}
               alt="Students with different disabilities working together"
             />
             <p>
