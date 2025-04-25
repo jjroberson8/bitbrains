@@ -27,7 +27,7 @@ export const DataProvider = ({children}) => {
 
     // Load the quiz JSON
   useEffect(() => {
-    fetch('bitbrains/quiz.json') // fetch data
+    fetch('quiz.json') // fetch data
      .then(response => response.json()) // after it has been fetched set the wait(response)
      .then(data => setQuizs(data))// set the data
   }, []);
