@@ -1,4 +1,6 @@
 import { createContext, useState, useEffect, } from 'react';
+import correctAnswerAudio from '../assets/Quiz_audio/correctAnswerAudio.mp3';
+import wrongAnswerAudio from '../assets/Quiz_audio/wrongAnswerAudio.mp3';
 
 const DataContext = createContext({});
 
@@ -12,6 +14,11 @@ export const DataProvider = ({children}) => {
   const [correctAnswer, setCorrectAnswer] = useState('');
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [score, setScore] = useState(0);
+
+  const wrongAnswerSound = new Audio(wrongAnswerAudio);
+  wrongAnswerSound.volume = .15;
+  const correctAnswerSound = new Audio(correctAnswerAudio);
+  correctAnswerSound.volume = .15;
 
   //Display control states
   const [showStart, setShowStart] = useState(true);
@@ -45,15 +52,17 @@ export const DataProvider = ({children}) => {
         setSelectedAnswer(selected);
 
         if (selected === question.answer) {
+            correctAnswerSound.play();
             event.target.classList.add('success');
-            let correctResult = document.createElement('span')
+            let correctResult = document.createElement('span');
             correctResult.classList.add('question-result');
             correctResult.innerText = ' Correct!';
             event.target.appendChild(correctResult);
-            setScore(score + 1);
+            setScore((prev) => prev + 1);
         } else {
+            wrongAnswerSound.play();
             event.target.classList.add('danger');
-            let wrongResult = document.createElement('span')
+            let wrongResult = document.createElement('span');
             wrongResult.classList.add('question-result');
             wrongResult.innerText = ' Wrong Answer';
             event.target.appendChild(wrongResult);

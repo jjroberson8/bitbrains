@@ -16,11 +16,11 @@ function App() {
   return (
     <>
       <div className='App'>
-        <Router>
+        <Router basename={import.meta.env.BASE_URL }>
           <Navbar/>
           <div className='wrap-content'>
             <Routes>
-              <Route path='/' exact element={<Home/>}/>
+              <Route path='' exact element={<Home/>}/>
               <Route path='/overview' exact element={<Overview/>}/>
               <Route path='/showcase' exact element={<Showcase/>}/>
               <Route path='/quiz' exact element={<Quiz/>}/>

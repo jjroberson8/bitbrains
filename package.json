@@ -1,5 +1,6 @@
 {
   "name": "cs344-final",
+  "homepage": "https://jjroberson8.github.io/bitbrains/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -16,9 +19,12 @@
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "bitbrains": "file:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.4.1"
+    "react-helmet": "^6.1.0",
+    "react-router": "^7.4.1",
+    "validator": "^13.15.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -28,6 +34,7 @@
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
     "vite": "^6.2.6"
   }

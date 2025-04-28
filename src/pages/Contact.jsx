@@ -1,24 +1,29 @@
-import React, {useEffect, useState} from 'react'
-import Sidebar from '../components/Sidebar.jsx'
-import getHeaders from '../helper_functions/getHeaders.jsx'
-import { Contact_Form } from '../components/Contact_Form.jsx'
+import React, {useEffect, useState, Suspense, lazy} from 'react'
+import { Helmet } from 'react-helmet'
+import getHeaders from '../helper_functions/getHeaders'
+import { ContactForm } from '../components/Contact_Form'
+
+const Sidebar = lazy(()=> import('../components/Sidebar'));
 
 function Contact() {
   const [isRendered, setIsRendered] = useState(false);
     
-      useEffect(() => {
-        setIsRendered(true);
-      }), [];
+    useEffect(() => {
+      setIsRendered(true);
+    }), [];
   return (
     <>
-    <title> Contact us </title>
-    <meta name='description' content='Contact Bit Brains'/>
-    <meta name='keywords' content='Contact, Bit Brains'/>
-    <div className='main' role='main' id='contact-main'>
-    {isRendered ? (
-        <Sidebar items={getHeaders()}/> ) : ( <p> Rendering </p>)}
+    <Helmet>
+      <title> Contact us </title>
+      <meta name='description' content='Contact Bit Brains'/>
+      <meta name='keywords' content='Contact, Bit Brains'/>
+    </Helmet>
+    <main className='main' role='main' id='contact-main'>
+      <Suspense fallback={<p> Loading Sidebar... </p>}>
+        {isRendered &&<Sidebar items={getHeaders()}/>}
+      </Suspense>
       <h2 id='contact-us'>Contact us here</h2>
-      <Contact_Form/>
+      <ContactForm/>
       <div className='formStatus' id='formStatus'></div>
       <h2 id='contact-options'> What are the options? </h2>
       <section>
@@ -29,7 +34,7 @@ function Contact() {
           <li><strong>Inquiry:</strong> General questions, message is information about the question.</li>
         </ul>
       </section>
-    </div>
+    </main>
     </>
   )
 }

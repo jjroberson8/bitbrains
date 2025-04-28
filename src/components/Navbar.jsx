@@ -10,22 +10,22 @@ import '../styles/Navbar.css';
 function Navbar() {
   const [openLinks, setOpenLinks] = useState(false);
   function debounce(func, wait, immediate) {
-    var timeout;
+    let timeout;
     return function() {
-      var context = this, args = arguments;
-      var later = function() {
+      let context = this, args = arguments;
+      let later = function() {
         timeout = null;
         if (!immediate) func.apply(context, args);
       };
-      var callNow = immediate && !timeout;
+      let callNow = immediate && !timeout;
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
       if (callNow) func.apply(context, args);
     };
   };
 
-  var handleResizeWithTimeout = debounce(function() {
-    if (window.innerWidth > 900 && openLinks == true) {
+  let handleResizeWithTimeout = debounce(function() {
+    if (window.innerWidth > 900 && openLinks) {
       toggleNavbar();
     }
   }, 10); 
@@ -37,7 +37,7 @@ function Navbar() {
   window.addEventListener("resize", handleResizeWithTimeout); 
 
   return (
-    <div className='navbar' role='navigation'>
+    <nav className='navbar' role='navigation'>
         <div className='leftSide' id={openLinks? "open" : "close"}>
           <img src={AccessibilityImage} alt='Website Logo'/>
           <h1 className='navbar-logo'> Bit Brains</h1>
@@ -53,7 +53,7 @@ function Navbar() {
             <FontAwesomeIcon icon={faBars} size='2xl' alt='Bars icon'/>
           </button>
         </div>
-    </div>
+    </nav>
   )
 }
 
