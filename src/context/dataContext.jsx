@@ -15,7 +15,6 @@ export const DataProvider = ({children}) => {
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [score, setScore] = useState(0);
 
-  //Audio players and set volumes to moderate
   const wrongAnswerSound = new Audio(wrongAnswerAudio);
   wrongAnswerSound.volume = .15;
   const correctAnswerSound = new Audio(correctAnswerAudio);
@@ -36,8 +35,7 @@ export const DataProvider = ({children}) => {
   //set first question
   useEffect(() =>{
     if (quizs.length > questionIndex) {
-        setQuestion(quizs[questionIndex + 1])
-        setQuestion(quizs[questionIndex + 1]);
+        setQuestion(quizs[questionIndex]);
     }
   }, [quizs, questionIndex]);
 
@@ -80,7 +78,7 @@ export const DataProvider = ({children}) => {
     wrongBtn?.classList.remove('danger');
     const rightBtn = document.querySelector('button.success');
     rightBtn?.classList.remove('success');
-    setQuestionIndex((prev) => prev + 1);
+    setQuestionIndex(questionIndex + 1);
   }
 
   //show the results 

@@ -16,12 +16,11 @@ function Overview() {
   return (
     <>
     <Helmet>
-    <title>Overview</title>
-    <meta name='description' content='Overview on Web Accessability'/>
-    <meta name='keywords' content='Accessability, Overview'/>
+      <title>Overview</title>
+      <meta name='description' content='Overview on Web Accessibility'/>
+      <meta name='keywords' content='Accessibility, Overview'/>
     </Helmet>
-
-    <div className='main' role='main'>
+    <main className='main' role='main'>
       <Suspense>
       {isRendered ? (
         <Sidebar items={getHeaders()}/> ) : ( <p> Rendering </p>)}
@@ -54,19 +53,19 @@ function Overview() {
           <ul>
             Examples of Accessibility Catergories for Vision
             <li>Text</li>
-            <li id ="subtext">Appropriate Font Size (Not too big or small)</li>
-            <li id ="subtext">Spacing (Letters aren't clustered or too far apart)</li>
-            <li id ="subtext">Color/Contrast (Text color and contrast to background is readable)</li>
-            <li id ="subtext">Style (Text style is understandable)</li>
-            <li id ="subtext">Length (Text goes to a new line after a certain length)</li>
+            <li className ="subtext">Appropriate Font Size (Not too big or small)</li>
+            <li className ="subtext">Spacing (Letters aren't clustered or too far apart)</li>
+            <li className ="subtext">Color/Contrast (Text color and contrast to background is readable)</li>
+            <li className ="subtext">Style (Text style is understandable)</li>
+            <li className ="subtext">Length (Text goes to a new line after a certain length)</li>
           </ul>
 
           <ul>
           <li>Website Page</li>
-          <li id ="subtext">Brightness (Page isn't too bright or dark)</li>
-          <li id ="subtext">UI (Simple to navigate)</li>
-          <li id ="subtext">Alingnment (Page is well structured and flows nicely)</li>
-          <li id ="subtext">Border (Text box borders are spaced well from each other)</li>
+          <li className ="subtext">Brightness (Page isn't too bright or dark)</li>
+          <li className ="subtext">UI (Simple to navigate)</li>
+          <li className ="subtext">Alingnment (Page is well structured and flows nicely)</li>
+          <li className ="subtext">Border (Text box borders are spaced well from each other)</li>
           </ul> 
         </h3>
       </section>
@@ -95,12 +94,18 @@ function Overview() {
           <ul>
             Examples of Accessibility Catergories for Hearing
             <li>Sound Assistance</li>
-            <ul id ="subtext">Text-To-Speech, Volume Control/Levels, Audio Cues </ul>
+            <li className ="subtext">Text-To-Speech (A screen reader that transcribes text to audio)</li>
+            <li className ="subtext">Volume Control/Levels (Video sound is set at an appropriate level and can be adjusted by the user)</li>
+            <li className ="subtext">Audio Cues (Audio is played depending on user action)</li>
+            
           </ul>
 
           <ul>
           <li>Website Page</li>
-          <ul id ="subtext">Sign Language, Closed Captions, Descriptive Transcipts, Speech Recognition Software </ul>
+          <li className ="subtext">Sign Language (A video that provides the user information through using ASL (American Sign Language))</li>
+          <li className ="subtext">Closed Captions (Written desriptions of audio elements)</li>
+          <li className ="subtext">Descriptive Transcipts (Transcipts are worded well and understandable)</li>
+          <li className ="subtext">Speech Recognition Software (Users can use their voice to input text)</li>
           </ul>
           
         </h3>
@@ -125,14 +130,15 @@ function Overview() {
       <h3>
         <ul>
           Examples for Keyboard Accessibility 
-          <li>Page Traversal</li>
-            <ul id="subtext">
-              Working Keystrokes, Navigational Order, Focus Order
-            </ul>
+          <li>Page Traversal
+            <li className ="subtext">Working Keystrokes (Users should be able to use their keyboard to navigate through the page)</li>
+            <li className ="subtext">Navigational Order (Keyboard navigation should follow the visual flow of the page)</li>
+            <li className ="subtext">Focus Order Indicator (Allows the user to visually see where to tab to activate keyboard navigation)</li>
+          </li>  
         </ul>
       </h3>
       </section>
-    </div>
+    </main>
     </>
   )
 }

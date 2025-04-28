@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense, lazy} from 'react'
+import { Helmet } from 'react-helmet'
 import getHeaders from '../helper_functions/getHeaders';
 import '../styles/Showcase.css';
 import Sidebar from '../components/Sidebar';
@@ -14,13 +15,15 @@ function Showcase() {
 
   return (
     <>
-      <title>Accessibility Showcase</title>
-      <meta name='description' content='Compare accessible vs non-accessible web elements'/>
-      <meta name='keywords' content='Accessibility, Comparison, Showcase'/>
-      <div className='main' role='main'>
-        {isRendered ? (
-          <Sidebar items={getHeaders()}/> ) : ( <p> Rendering </p>)}
-        
+      <Helmet>
+        <title>Accessibility Showcase</title>
+        <meta name='description' content='Compare accessible vs non-accessible web elements'/>
+        <meta name='keywords' content='Accessibility, Comparison, Showcase'/>
+      </Helmet>
+      <main className='main' role='main'>
+      <Suspense fallback={<p> Loading Sidebar... </p>}>
+        {isRendered &&<Sidebar items={getHeaders()}/>}
+      </Suspense>
         <h1>Web Accessibility Showcase</h1>
         <h2>See the Difference Between Accessible and Non-Accessible Elements</h2>
         <p>
@@ -173,7 +176,7 @@ function Showcase() {
             </div>
           </div>
         </section>
-      </div>
+      </main>
     </>
   )
 }

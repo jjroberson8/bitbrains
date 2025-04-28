@@ -49,10 +49,12 @@
 }
 
 span.invalid {
-    color: red;
+    font-weight:bold ;
+    color: darkred;
     margin: 12px;
 }
 span.valid {
-    color: green;
+    font-weight:bold ;
+    color: darkgreen;
     margin: 12px;
 }
