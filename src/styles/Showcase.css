@@ -22,21 +22,21 @@
   }
   
   .bad-example {
-    border-left: 4px solid #dc3545;
+    border-left: 4px solid #550C17;
     background-color: #ffe6e6;
   }
   
   .good-example {
-    border-left: 4px solid #28a745;
+    border-left: 4px solid #0E3918;
     background-color: #e6ffe6;
   }
   
   .bad-example h4 {
-    color: #dc3545;
+    color: #550C17;
   }
   
   .good-example h4 {
-    color: #28a745;
+    color: #0E3918;
   }
   
   .nav-example {
