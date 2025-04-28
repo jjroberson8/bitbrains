@@ -1,0 +1,1 @@
+import{u as l,j as e}from"./index-C0D0G7IQ.js";function c({items:a}){const r=l();return e.jsx("div",{className:"sidebar",children:e.jsx("ul",{children:a.map((s,i)=>e.jsxs("li",{children:[" ",e.jsx("a",{href:`${r.pathname.slice(1)}#${s.href}`,children:s.label})," "]},i))})})}export{c as default};
