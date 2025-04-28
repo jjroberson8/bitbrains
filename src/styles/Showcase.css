@@ -38,6 +38,18 @@
   .good-example h4 {
     color: #0E3918;
   }
+
+  .bad-example img {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+  }
+
+  .good-example img {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+  }
   
   .nav-example {
     display: flex;

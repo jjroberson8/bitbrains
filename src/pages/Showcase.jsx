@@ -2,10 +2,10 @@ import React, { useState, useEffect, Suspense, lazy} from 'react'
 import { Helmet } from 'react-helmet'
 import getHeaders from '../helper_functions/getHeaders';
 import '../styles/Showcase.css';
-import Sidebar from '../components/Sidebar';
 import badExample from '../assets/badexample.jpg';
 import goodExample from '../assets/goodexample.jpg';
 
+const Sidebar = lazy(() => import('../components/Sidebar'));
 function Showcase() {
   const [isRendered, setIsRendered] = useState(false);
     

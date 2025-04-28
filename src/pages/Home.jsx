@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, lazy, Suspense } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import getHeaders from '../helper_functions/getHeaders';
 import '../styles/Home.css';
@@ -195,7 +195,7 @@ function Home() {
               title="Learn More About Web Accessibility"
               text="Explore the world of web accessibility and make a difference."
               btnText="Explore Now"
-              url="bitbrains/learnmore"
+              url="/learnmore"
             />
           </section>
         </div>

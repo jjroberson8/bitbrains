@@ -62,14 +62,12 @@ export const ContactForm = () => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
           let result = document.querySelector('#formStatus');
           result.classList.remove('failed')
           result.classList.add('success')
           result.textContent = "Sucess!"
         },
         (error) => {
-          console.log('FAILED...', error.text);
           let result = document.querySelector('#formStatus');
           result.classList.remove('success')
           result.classList.add('failed')

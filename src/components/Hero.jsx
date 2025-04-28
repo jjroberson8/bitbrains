@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router';
 import "../styles/HeroStyle.css";
 
 function Hero(props) {
@@ -8,9 +9,7 @@ function Hero(props) {
       <div className="hero-text">
         <h1>{props.title}</h1>
         <p>{props.text}</p>
-        <a href={props.url} className={props.btnClass}>
-          {props.btnText}
-        </a>
+        <Link to={props.url} className={props.btnClass}>{props.btnText}</Link>
       </div>
     </div>
   );
