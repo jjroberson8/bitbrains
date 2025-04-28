@@ -104,7 +104,7 @@ export const ContactForm = () => {
       </select><br/>
       <span className='invalid'>{reasonError}</span>
       <label htmlFor='contact_message' className='assistive-text'> Message: </label>
-      <textarea className=''  id='contact_message' name="message" aria-label='Input Message' placeholder='Write your message here' onChange={(e) => validateMessage(e)}/>
+      <textarea className=''  id='contact_message' name="message" placeholder='Write your message here' onChange={(e) => validateMessage(e)}/>
       <span className='invalid'>{messageError}</span>
       <label htmlFor='contact_submit' className='assistive-text'> Submit: </label>
       <input type="submit" id='contact_submit' value="Submit" />
