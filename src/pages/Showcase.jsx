@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import getHeaders from '../helper_functions/getHeaders';
 import '../styles/Showcase.css';
 import Sidebar from '../components/Sidebar';
+import badExample from '../assets/badexample.jpg';
+import goodExample from '../assets/goodexample.jpg';
 
 function Showcase() {
   const [isRendered, setIsRendered] = useState(false);
@@ -38,14 +40,19 @@ function Showcase() {
             <div className="example-row">
               <div className="bad-example">
                 <h4>Non-Accessible</h4>
-                <img src="/example-image.jpg" />
+                <img 
+                  className="center-image" 
+                  src={badExample} 
+                  alt="" 
+                />
                 <p>No alt text - screen readers can't interpret this image.</p>
               </div>
               <div className="good-example">
                 <h4>Accessible</h4>
                 <img 
-                  src="/example-image.jpg" 
-                  alt="A smiling woman holding a cup of coffee while working on her laptop"
+                  className="center-image" 
+                  src={goodExample} 
+                  alt="A woman smiling while holding a laptop and a cup of coffee." 
                 />
                 <p>Descriptive alt text conveys the image's content and purpose.</p>
               </div>
@@ -57,7 +64,7 @@ function Showcase() {
             <div className="example-row">
               <div className="bad-example">
                 <h4>Low Contrast (Fails WCAG)</h4>
-                <p style={{ color: '#aaaaaa', backgroundColor: '#f0f0f0' }}>
+                <p style={{ color: '#550C17', backgroundColor: '#f0f0f0' }}>
                   This text has very low contrast (2:1 ratio)
                 </p>
               </div>
